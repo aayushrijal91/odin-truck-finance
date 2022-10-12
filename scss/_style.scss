@@ -52,7 +52,6 @@ section.cta {
             mix-blend-mode: overlay;
             box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.14);
             padding: 50px 30px;
-            color: $white;
             margin: 24px 12px;
         }
     }
@@ -63,7 +62,10 @@ section.form {
 
     .multi-step-form {
         padding: 107px 60px 60px;
-        color: $white;
+
+        #prevBtn {
+            cursor: pointer;
+        }
 
         .slick-track {
             display: flex !important;
@@ -90,7 +92,9 @@ section.form {
                 margin-bottom: 0;
             }
 
-            input[type=text], input[type=email], input[type=number] {
+            input[type=text],
+            input[type=email],
+            input[type=number] {
                 background: none;
                 border-radius: 0;
                 border: none;
@@ -112,6 +116,62 @@ section.form {
 
             .form-check-inline {
                 margin-right: 2.5rem;
+            }
+
+
+            .form-check-input {
+                display: none;
+            }
+
+            .form-check-label {
+                cursor: pointer;
+                display: inline-block;
+                font-size: 16px;
+                line-height: 1.5;
+                padding: 14px 14px 14px 32px;
+                position: relative;
+
+                &:hover,
+                &:focus {
+                    .radio-button-circle:before {
+                        border-color: $white;
+                    }
+                }
+
+                &:active .radio-button-circle:before {
+                    transform: scale(1.1);
+                }
+            }
+
+            .radio-button-circle {
+                border-radius: 50%;
+                cursor: pointer;
+                display: block;
+                height: 8px;
+                left: 4px;
+                position: absolute;
+                top: 20px;
+                transition: background-color .1s ease-out;
+                vertical-align: middle;
+                width: 8px;
+
+                &:before {
+                    border: 1px solid $white;
+                    border-radius: 50%;
+                    content: '';
+                    display: inline-block;
+                    height: 20px;
+                    position: absolute;
+                    top: -6px;
+                    transition: border-color .1s ease-out,
+                        transform .1s ease-out;
+                    left: -6px;
+                    width: 20px;
+                }
+            }
+
+            .form-check-input:checked+.form-check-label .radio-button-circle {
+                background-color: $primary;
             }
         }
     }
@@ -152,12 +212,126 @@ section.form {
         list-style-image: url('../images/icons/form-list-tick.png');
 
         li {
-            color: $white;
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 1.29;
             padding: 23px 0;
             padding-left: 24px;
+        }
+    }
+}
+
+section.about-us {
+    padding: 223px 0;
+}
+
+section.truck-finance {
+    padding: 127px 0;
+
+    .types-row {
+        padding-top: 250px;
+    }
+}
+
+.truck-card .caption {
+    height: 91px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(237, 237, 237, 0.3) 100%);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.14);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 14px 16px;
+    font-weight: 600;
+}
+
+section.loans {
+    padding: 223px 0;
+}
+
+section.why-us {
+    padding: 127px 0;
+    position: relative;
+
+    .lightening {
+        position: absolute;
+        left: 0;
+        top: -18rem;
+        mix-blend-mode: screen;
+    }
+
+    .truck {
+        position: absolute;
+        left: 0;
+    }
+}
+
+section.how-does-it-work {
+    padding: 223px 0;
+
+    ul.loans-slider-nav {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style: none;
+            min-height: 311px;
+            padding: 30px;
+            position: relative;
+            flex: 1 0 0%;
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: self-start;
+                position: relative;
+                z-index: 5;
+                height: 100%;
+            }
+
+            a {
+                display: none;
+                opacity: 0;
+                transition: 0.5s all;
+                position: absolute;
+                top: 140.5px;
+                z-index: 1000;
+
+                &.prevBtn {
+                    left: -15px;
+                }
+    
+                &.nextBtn {
+                    right: -15px;
+                }
+            }
+
+            &.active {
+                a {
+                    display: block;
+                    opacity: 1;    
+                }
+            }
+
+            &.slide {
+                position: absolute;
+                background: $secondary;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            &.active~.slide {
+                opacity: 1;
+            }
         }
     }
 }

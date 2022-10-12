@@ -14,6 +14,19 @@ $(() => {
         arrows: false,
         touchMove: false
     });
+
+    let initialWidth = $('ul.loans-slider-nav li.active').outerWidth();
+    $('.loans-slider-wrapper ul li.slide').width($('ul.loans-slider-nav li.active').width());
+
+    $('.loan-slider-btn').on('click', function () {
+        let slideTarget = $(this).attr('slideTarget');
+        slideTarget = parseInt(slideTarget);
+
+        $(this).parents('ul').find('li').removeClass("active");
+        $(this).parents('ul').find(`li:nth-child(${slideTarget + 1})`).addClass('active');
+
+        $('.loans-slider-wrapper ul li ~ .slide').css('left', initialWidth * slideTarget);
+    });
 });
 
 let formSlick = $("#multi-step-form-slider").slick({
@@ -40,7 +53,7 @@ function showTab(n) {
         $("#nextBtn").html('Get Started');
     } else if (n == (x.length)) {
         $('.buttons').removeClass('d-flex').addClass('d-none');
-    }else if (n == (x.length - 1)) {
+    } else if (n == (x.length - 1)) {
         $("#nextBtn").removeClass('border-white').removeClass('text-white').addClass('btn-white').addClass('text-primary');
         $("#nextBtn").html('Submit');
     } else {
@@ -90,7 +103,7 @@ function validateForm() {
     return valid;
 }
 
-document.querySelectorAll('a[href="#form"]').forEach(function (anchor) {
+document.querySelectorAll('a[href="#form"], a[href="#about-us"], a[href="#truck-finance"], a[href="#loans"], a[href="#why-us"], a[href="#how-does-it-work"], a[href="#things-to-know"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
