@@ -193,7 +193,7 @@ section.form {
 
                 &::before {
                     content: "";
-                    background: #d9d9d9;
+                    background: $grey;
                     height: 10px;
                     width: 100%;
                 }
@@ -445,7 +445,7 @@ section.faq {
 }
 
 section.testimonials {
-    padding: 111px 0;
+    padding: 123px 0;
 
     .testimonial-slider {
         .slick-track {
@@ -533,14 +533,13 @@ section.testimonials {
         flex-wrap: wrap;
 
         .tabs {
-            flex: 1 0 0%;
+            flex: 1 0 252px;
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(237, 237, 237, 0.3) 100%);
             cursor: pointer;
-            min-width: 200px;
             height: 450px;
             overflow: hidden;
             position: relative;
-            margin: 0 12px;
+            margin: 0 10px;
             font-size: 16px;
             -moz-transition: all 0.4s ease-in-out 0.1s;
             -o-transition: all 0.4s ease-in-out 0.1s;
@@ -591,8 +590,7 @@ section.testimonials {
         }
 
         .tabs.active {
-            width: 528px;
-            flex: 0 0 auto;
+            flex: 0 0 328px;
             flex-grow: 10000;
             padding: 38.52px 35px 24px;
             align-items: start;
@@ -619,11 +617,11 @@ section.testimonials {
     }
 }
 
+section.footer-contact {
+    padding: 227px 0;
+}
+
 footer {
     font-size: 0.875rem;
-    background-color: #221f1f;
-
-    @include media-breakpoint-down(sm) {
-        font-size: 0.61rem;
-    }
+    padding: 123px 0 50px;
 }

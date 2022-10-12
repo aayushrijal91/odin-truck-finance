@@ -708,7 +708,7 @@ include __DIR__ . '/header.php';
 
 <section class="testimonials" id="testimonials">
     <div class="container">
-        <div class="fs-64 lh-1 text-center fw-700 pb-6">Frequently asked questions</div>
+        <div class="fs-64 lh-1 text-center fw-700 pb-6">Client reviews</div>
 
         <div class="testimonial-slider d-xl-none">
             <div class="testimonial-slider-content">
@@ -845,6 +845,20 @@ include __DIR__ . '/header.php';
                 <?= renderImg("stars.png", "icons", "business-stars") ?>
             </li>
         </ul>
+    </div>
+</section>
+
+<section class="footer-contact">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 text-center lh-1">
+                <div class="fs-128 fw-700">Need a great deal on Truck Finance?</div>
+                <div class="fs-24 pt-5 pb-6">Go with a company that has been financing trucks for over 20 years</div>
+                <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-md-5 fw-500">
+                    Enquire Now
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 
