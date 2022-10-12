@@ -27,6 +27,52 @@ $(() => {
 
         $('.loans-slider-wrapper ul li ~ .slide').css('left', initialWidth * slideTarget);
     });
+
+    $(".accordion-head").on('click', function () {
+        $(".accordion-head").removeClass("active");
+        $('.accordion-card').css('background', 'linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(237, 237, 237, 0.3) 100%)');
+        $(this).addClass('active').parents('.accordion-card').css('background', "#F9A51A");
+
+        if ($('.accordion-body').is(':visible')) {
+            $(".accordion-body").slideUp(300);
+            $(".plusminus").html('+');
+        }
+        if ($(this).next(".accordion-body").is(':visible')) {
+            $(this).next(".accordion-body").slideUp(300);
+            $(this).find(".plusminus").html('|');
+        } else {
+            $(this).next(".accordion-body").slideDown(300);
+            $(this).find(".plusminus").html('|');
+        }
+    });
+
+    $(".testimonial-slider").slick({
+        slidesToShow: 3,
+        arrows: false,
+        dots: true,
+        autoplay: true,
+
+        responsive: [
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 540,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
+    $('.testimonials .accordion .tabs').on('click', function (e) {
+        e.preventDefault();
+        $('.testimonials .accordion .tabs').removeClass('active');
+        $(this).addClass('active');
+    });     
 });
 
 let formSlick = $("#multi-step-form-slider").slick({

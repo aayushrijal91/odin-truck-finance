@@ -2,7 +2,7 @@
 include __DIR__ . '/env.php';
 
 $site = "Odin Truck Finance";
-$phone_number = "040 799 799";
+$phone_number = "1300 351 598";
 $admin_email = 'arijal@aiims.com.au';
 // $bcc_email = "";
 $no_reply_email = 'info@website.com.au';
