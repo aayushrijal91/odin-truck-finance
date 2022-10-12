@@ -41,10 +41,11 @@ include __DIR__ . '/header.php';
 <section class="banner">
     <?= renderImg("banner-lightening.png", "background", "banner-lightening") ?>
     <?= renderImg("banner-truck.png", "background", "banner-truck") ?>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
-                <div class="fs-128 fw-400 fw-700 lh-1 pb-4">Need a great deal on Truck Finance?</div>
+                <div class="hero_heading fs-128 fw-400 fw-700 lh-1 pb-4">Need a great deal on Truck Finance?</div>
                 <div class="pt-3 pb-6 fs-24">Go with a company that has been financing trucks for over 20 years</div>
                 <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-md-5">
                     Enquire Now
@@ -122,7 +123,9 @@ include __DIR__ . '/header.php';
 </section>
 
 <section class="form">
-    <div class="container">
+    <?= renderImg("ellipse-left.png", "background", "ellipse-left") ?>
+
+    <div class="container position-relative">
         <div class="row align-items-center">
             <div class="col-lg-7">
                 <form id="slider-form" class="bg-secondary" action="./src/form" method="POST">
@@ -269,8 +272,6 @@ include __DIR__ . '/header.php';
 </section>
 
 <section class="about-us" id="about-us">
-    <?= renderImg("ellipse-left.png", "background", "ellipse-left") ?>
-
     <div class="container position-relative">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -302,7 +303,7 @@ include __DIR__ . '/header.php';
                     $truck_types = ["Car Carrier", "Concrete Truck", "Crane Truck", "Livestock Truck", "Refrigerated Truck", "Tilt Tray Truck", "Tip Truck", "Water Truck", "Pantech Truck", "Prime Mover"];
 
                     foreach ($truck_types as $key => $type) { ?>
-                        <div class="col-lg-3">
+                        <div class="col-lg-4 col-xxl-3">
                             <div class="truck-card">
                                 <?= renderImg("truck-finance-" . ($key + 1) . ".jpg", "lib", "w-100") ?>
                                 <div class="caption"><?= $type ?></div>
@@ -320,16 +321,16 @@ include __DIR__ . '/header.php';
 
     <div class="container position-relative">
         <div class="row justify-content-end pb-3">
-            <div class="col-xl-9">
+            <div class="col-lg-10 col-xxl-9">
                 <div class="fs-96 lh-1 fw-700 text-end">& can help you with multiple types of loans!</div>
             </div>
         </div>
-        <div class="row pt-9">
+        <div class="row pt-9 gy-5">
             <?php
             $loan_types_1 = ["Boom / Scissor Lifts", "Construction / Mining Equipment", "Luxury Vehicles", "Agriculture", "Healthcare"];
 
             foreach ($loan_types_1 as $key => $type) { ?>
-                <div class="col-lg-2">
+                <div class="col-lg-3 col-xxl-2">
                     <div class="truck-card">
                         <?= renderImg("loan_type_1_" . ($key + 1) . ".jpg", "lib", "w-100") ?>
                         <div class="caption"><?= $type ?></div>
@@ -343,7 +344,7 @@ include __DIR__ . '/header.php';
             $loan_types_1 = ["Transport / Logistics", "Manufacturing", "Business Finance", "Commercial Vehicles"];
 
             foreach ($loan_types_1 as $key => $type) { ?>
-                <div class="col-lg-2">
+                <div class="col-lg-3 col-xxl-2">
                     <div class="truck-card">
                         <?= renderImg("loan_type_2_" . ($key + 1) . ".jpg", "lib", "w-100") ?>
                         <div class="caption"><?= $type ?></div>
@@ -359,8 +360,8 @@ include __DIR__ . '/header.php';
     <?= renderImg("why-us.png", "lib", "truck") ?>
     <div class="container">
         <div class="row justify-content-end">
-            <div class="col-lg-6">
-                <div class="fs-96 fw-700 pb-4 line-height-1">So why ODIN?</div>
+            <div class="col-lg-5 col-xxl-6">
+                <div class="fs-96 fw-700 pb-5 lh-1">So why ODIN?</div>
                 <div class="fs-18 pb-4">If you're looking for fast and expert truck loan financing, you've come to the right place. At Odin Finance, we understand the unique needs of truck owners, and our team is committed to getting you the best financing possible.</div>
                 <div class="fs-18">In the business for 20+ years, we’re specialists in Truck Financing, and we offer tailored products to match your customer profile. Whether you are looking for funding for personal or business, Odin Truck Finance can get the best loan for you!</div>
                 <div class="px-4 py-5">
@@ -397,14 +398,14 @@ include __DIR__ . '/header.php';
     <?= renderImg("ellipse-left.png", "background", "ellipse-left") ?>
 
     <div class="container position-relative">
-        <div class="row align-items-center justify-content-between">
-            <div class="col-lg-3">
+        <div class="row align-items-center justify-content-between gy-5">
+            <div class="col-xxl-3">
                 <div class="fs-96 lh-1 fw-700 pb-5">How does it work?</div>
                 <div class="fs-18">
                     Applying for a truck loan is easy, but there are a few things you need to know before you get started. Odin Finance does Truck Finance in 4 easy steps.
                 </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg col-xxl-8">
                 <div class="loans-slider-wrapper">
                     <ul class="loans-slider-nav">
                         <li class="active">
@@ -501,9 +502,10 @@ include __DIR__ . '/header.php';
 <section class="timeframe">
     <?= renderImg("lightening-timeframe.png", "background", "lightening") ?>
     <?= renderImg("how-long-van.png", "lib", "hero_van") ?>
-    <div class="container">
+    
+    <div class="container position-relative">
         <div class="row justify-content-end">
-            <div class="col-lg-8">
+            <div class="col-lg-7 col-xxl-8">
                 <div class="fs-96 fw-700 lh-1">How long does it take?</div>
                 <div class="fs-18 pt-6">For fast and simple application, contact one of our Consultants on <a href="tel:<?= $phone_number ?>" class="text-decoration-none text-white"><?= $phone_number ?></a> or enter your details into our online pre-approval page. Alternatively, you can send us a quick quote request and someone from our office will be in contact.</div>
                 <div class="px-4 py-5">
@@ -539,7 +541,7 @@ include __DIR__ . '/header.php';
                     Finding a truck is never easy, but we can make the finance part simpler for you! To help you get prepared, here are some points to take into consideration before you make your next truck purchase.
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg col-xxl-6">
                 <div class="row gx-4">
                     <div class="col-lg-6">
                         <div class="row gy-4">
@@ -683,7 +685,7 @@ include __DIR__ . '/header.php';
     ];
 
     ?>
-    <div class="container">
+    <div class="container position-relative">
         <div class="fs-64 lh-1 text-center fw-700 pb-6">Frequently asked questions</div>
         <div class="accordion-container">
             <?php foreach ($faqs as $key => $faq) : ?>
@@ -863,7 +865,7 @@ include __DIR__ . '/header.php';
 <section class="footer-contact">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-9 text-center lh-1">
+            <div class="col-lg-10 col-xxl-9 text-center lh-1">
                 <div class="fs-128 fw-700">Need a great deal on Truck Finance?</div>
                 <div class="fs-24 pt-5 pb-6">Go with a company that has been financing trucks for over 20 years</div>
                 <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-md-5 fw-500">

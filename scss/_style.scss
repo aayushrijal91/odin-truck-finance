@@ -30,12 +30,17 @@ header {
         position: absolute;
         right: 0;
         top: -23rem;
+        z-index: -1;
     }
 }
 
 section.banner {
     position: relative;
     padding: 40px 0 260px;
+
+    @include media-breakpoint-down(xxl) {
+        padding-bottom: 380px;
+    }
 
     .banner-lightening {
         position: absolute;
@@ -48,6 +53,12 @@ section.banner {
         position: absolute;
         right: 10rem;
         bottom: 0;
+    }
+
+    .hero_heading {
+        @include media-breakpoint-only(xl) {
+            font-size: 7rem !important;
+        }
     }
 }
 
@@ -70,8 +81,18 @@ section.form {
     padding: 128px 0;
     position: relative;
 
+    .ellipse-left {
+        position: absolute;
+        left: 0;
+        z-index: -1;
+    }
+
     .multi-step-form {
         padding: 107px 60px 60px;
+
+        @include media-breakpoint-down(xxl) {
+            padding: 60px 40px;
+        }
 
         #prevBtn {
             cursor: pointer;
@@ -218,8 +239,12 @@ section.form {
     }
 
     ul.form-list {
-        padding-inline-start: 7rem;
         list-style-image: url('../images/icons/form-list-tick.png');
+        padding-inline-start: 7rem;
+
+        @include media-breakpoint-down(xxl) {
+            padding-inline-start: 4rem;
+        }
 
         li {
             font-size: 1.5rem;
@@ -234,20 +259,16 @@ section.form {
 section.about-us {
     padding: 223px 0;
     position: relative;
-
-    .ellipse-left {
-        position: absolute;
-        top: -30rem;
-        left: 0;
-    }
 }
 
 section.truck-finance {
     padding: 127px 0;
     position: relative;
 
-    .types-row {
-        padding-top: 250px;
+    .types-row {        
+        @include media-breakpoint-up(xxl) {
+            padding-top: 250px;
+        }
     }
 }
 
@@ -273,6 +294,7 @@ section.loans {
         position: absolute;
         right: 0;
         top: -23rem;
+        z-index: -1;
     }
 }
 
@@ -301,6 +323,7 @@ section.how-does-it-work {
         position: absolute;
         top: -30rem;
         left: 0;
+        z-index: -1;
     }
 
     ul.loans-slider-nav {
@@ -394,6 +417,7 @@ section.things-to-know {
         position: absolute;
         right: 0;
         top: -30rem;
+        z-index: -1;
     }
 
     .things-to-know-card {
@@ -413,6 +437,7 @@ section.faq {
     .ellipse-left {
         position: absolute;
         left: 0;
+        z-index: -1;
     }
 
     @include media-breakpoint-up(md) {
@@ -579,7 +604,6 @@ section.testimonials {
         flex-wrap: wrap;
 
         .tabs {
-            flex: 1 0 252px;
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(237, 237, 237, 0.3) 100%);
             cursor: pointer;
             height: 450px;
@@ -597,6 +621,11 @@ section.testimonials {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            flex: 1 0 230px;
+
+            @include media-breakpoint-down(xxl) {
+                flex: 1 0 200px;
+            }
 
             .business-branding {
                 display: flex;
@@ -636,10 +665,14 @@ section.testimonials {
         }
 
         .tabs.active {
-            flex: 0 0 328px;
             flex-grow: 10000;
             padding: 38.52px 35px 24px;
             align-items: start;
+            flex: 0 0 528px;
+
+            @include media-breakpoint-down(xxl) {
+                flex: 0 0 450px;
+            }
 
             .business-branding {
                 display: flex;
@@ -665,9 +698,11 @@ section.testimonials {
 
 section.footer-contact {
     padding: 227px 0;
+    position: relative;
 }
 
 footer {
     font-size: 0.875rem;
     padding: 123px 0 50px;
+    position: relative;
 }
