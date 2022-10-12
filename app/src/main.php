@@ -4,6 +4,8 @@ include __DIR__ . '/header.php';
 ?>
 
 <header>
+    <?= renderImg("ellipse-right.png", "background", "ellipse-right") ?>
+
     <div class="header-navigation-bar">
         <div class="container">
             <div class="row justify-content-center justify-content-lg-between align-items-center py-5">
@@ -267,7 +269,9 @@ include __DIR__ . '/header.php';
 </section>
 
 <section class="about-us" id="about-us">
-    <div class="container">
+    <?= renderImg("ellipse-left.png", "background", "ellipse-left") ?>
+
+    <div class="container position-relative">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="fs-96 fw-700 lh-1 pb-6">Who we are.</div>
@@ -285,7 +289,7 @@ include __DIR__ . '/header.php';
 </section>
 
 <section class="truck-finance" id="truck-finance">
-    <div class="container">
+    <div class="container position-relative">
         <div class="row">
             <div class="col-lg-4">
                 <div class="fs-96 fw-700 lh-1">
@@ -312,7 +316,9 @@ include __DIR__ . '/header.php';
 </section>
 
 <section class="loans" id="loans">
-    <div class="container">
+    <?= renderImg("ellipse-right.png", "background", "ellipse-right") ?>
+
+    <div class="container position-relative">
         <div class="row justify-content-end pb-3">
             <div class="col-xl-9">
                 <div class="fs-96 lh-1 fw-700 text-end">& can help you with multiple types of loans!</div>
@@ -388,7 +394,9 @@ include __DIR__ . '/header.php';
 </section>
 
 <section class="how-does-it-work" id="how-does-it-work">
-    <div class="container">
+    <?= renderImg("ellipse-left.png", "background", "ellipse-left") ?>
+
+    <div class="container position-relative">
         <div class="row align-items-center justify-content-between">
             <div class="col-lg-3">
                 <div class="fs-96 lh-1 fw-700 pb-5">How does it work?</div>
@@ -521,7 +529,9 @@ include __DIR__ . '/header.php';
 </section>
 
 <section class="things-to-know" id="things-to-know">
-    <div class="container">
+    <?= renderImg("ellipse-right.png", "background", "ellipse-right") ?>
+
+    <div class="container position-relative">
         <div class="row justify-content-between">
             <div class="col-lg-5 py-8">
                 <div class="fs-96 lh-1 fw-700">Things you should know<br>...</div>
@@ -633,6 +643,8 @@ include __DIR__ . '/header.php';
 </section>
 
 <section class="faq">
+    <?= renderImg("ellipse-left.png", "background", "ellipse-left") ?>
+
     <?php
     $faqs = [
         [

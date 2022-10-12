@@ -3,6 +3,8 @@
 }
 
 header {
+    position: relative;
+
     .header-navigation-bar {
         ul.navigation {
             display: flex;
@@ -22,6 +24,12 @@ header {
                 }
             }
         }
+    }
+
+    .ellipse-right {
+        position: absolute;
+        right: 0;
+        top: -23rem;
     }
 }
 
@@ -45,6 +53,7 @@ section.banner {
 
 section.cta {
     padding: 41px 0;
+    position: relative;
 
     .cta-slider {
         .slick-slide {
@@ -59,6 +68,7 @@ section.cta {
 
 section.form {
     padding: 128px 0;
+    position: relative;
 
     .multi-step-form {
         padding: 107px 60px 60px;
@@ -223,10 +233,18 @@ section.form {
 
 section.about-us {
     padding: 223px 0;
+    position: relative;
+
+    .ellipse-left {
+        position: absolute;
+        top: -30rem;
+        left: 0;
+    }
 }
 
 section.truck-finance {
     padding: 127px 0;
+    position: relative;
 
     .types-row {
         padding-top: 250px;
@@ -249,6 +267,13 @@ section.truck-finance {
 
 section.loans {
     padding: 223px 0;
+    position: relative;
+
+    .ellipse-right {
+        position: absolute;
+        right: 0;
+        top: -23rem;
+    }
 }
 
 section.why-us {
@@ -270,6 +295,13 @@ section.why-us {
 
 section.how-does-it-work {
     padding: 223px 0;
+    position: relative;
+
+    .ellipse-left {
+        position: absolute;
+        top: -30rem;
+        left: 0;
+    }
 
     ul.loans-slider-nav {
         display: flex;
@@ -356,6 +388,13 @@ section.timeframe {
 
 section.things-to-know {
     padding: 123px 0;
+    position: relative;
+
+    .ellipse-right {
+        position: absolute;
+        right: 0;
+        top: -30rem;
+    }
 
     .things-to-know-card {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(237, 237, 237, 0.3) 100%);
@@ -369,6 +408,12 @@ section.things-to-know {
 
 section.faq {
     padding: 227px 0;
+    position: relative;
+
+    .ellipse-left {
+        position: absolute;
+        left: 0;
+    }
 
     @include media-breakpoint-up(md) {
         padding: 64px 0;
@@ -446,6 +491,7 @@ section.faq {
 
 section.testimonials {
     padding: 123px 0;
+    position: relative;
 
     .testimonial-slider {
         .slick-track {
