@@ -46,7 +46,7 @@ include __DIR__ . '/header.php';
             <div class="col-lg-9">
                 <div class="hero_heading fs-128 fw-400 fw-700 lh-1 pb-4">Need a great deal on Truck Finance?</div>
                 <div class="sub_heading pt-2 pt-md-3 pb-6 fs-24">Go with a company that has been financing trucks for over 20 years</div>
-                <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-5">
+                <a href="#form" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-5">
                     Enquire Now
                 </a>
             </div>
@@ -221,7 +221,7 @@ include __DIR__ . '/header.php';
     </div>
 </section>
 
-<section class="form">
+<section class="form" id="form">
     <?= renderImg("ellipse-left.png", "background", "ellipse-left") ?>
 
     <div class="container position-relative">
@@ -376,7 +376,7 @@ include __DIR__ . '/header.php';
             <div class="col-lg-5 col-xl-6">
                 <div class="fs-96 fw-700 lh-1 pb-md-5 pb-lg-6">Who<br class="d-md-none"> we are.</div>
                 <div class="d-none d-md-block">
-                    <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-md-5 fw-500">
+                    <a href="#form" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-md-5 fw-500">
                         Enquire Now
                     </a>
                 </div>
@@ -512,7 +512,7 @@ include __DIR__ . '/header.php';
                         <div class="col fs-24 fw-600">We deal with transport operators Australia-wide</div>
                     </div>
                 </div>
-                <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-5 fw-500">
+                <a href="#form" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-5 fw-500">
                     Enquire Now
                 </a>
             </div>
@@ -626,8 +626,8 @@ include __DIR__ . '/header.php';
 </section>
 
 <section class="timeframe">
-    <?= renderImg("lightening-timeframe.png", "background", "lightening") ?>
-    <?= renderImg("how-long-van.png", "lib", "hero_van") ?>
+    <?= renderImg("lightening-timeframe.png", "background", "lightening d-none d-md-block") ?>
+    <?= renderImg("how-long-van.png", "lib", "hero_van d-none d-md-block") ?>
 
     <div class="container position-relative">
         <div class="row justify-content-end">
@@ -648,7 +648,7 @@ include __DIR__ . '/header.php';
                         <div class="col fs-24 fw-600">Settlement within <span class="fs-32">48 hours</span></div>
                     </div>
                 </div>
-                <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-md-5 fw-500">
+                <a href="#form" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-5 fw-500">
                     Enquire Now
                 </a>
             </div>
@@ -994,7 +994,7 @@ include __DIR__ . '/header.php';
             <div class="col-xl-10 col-xxl-9 text-center lh-1">
                 <div class="fs-128 fw-700">Need a great deal on Truck Finance?</div>
                 <div class="fs-24 pt-5 pb-6">Go with a company that has been financing trucks for over 20 years</div>
-                <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-md-5 fw-500">
+                <a href="#form" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-5 fw-500">
                     Enquire Now
                 </a>
             </div>
