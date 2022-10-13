@@ -90,6 +90,22 @@ $(() => {
         $('.testimonials .accordion .tabs').removeClass('active');
         $(this).addClass('active');
     });
+
+    $("#hide-slide-nav").on('click', function() {
+        $('.slide-navigation').removeClass('show');
+    });
+
+    $('.slide-navigation ul.nav-list a').on('click', function() {
+        $('.slide-navigation').removeClass('show');
+    });
+    
+    $('#slide-nav-enquire').on('click', function() {
+        $('.slide-navigation').removeClass('show');
+    });
+
+    $("#show-slide-nav").on('click', function() {
+        $('.slide-navigation').addClass('show');
+    });
 });
 
 let formSlick = $("#multi-step-form-slider").slick({
