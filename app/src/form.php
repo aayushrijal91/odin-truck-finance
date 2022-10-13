@@ -16,11 +16,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token'])) {
         $to = $admin_email;
 
         $subject = "Message from " . $site;
-
+        
+        $abn_number = $_POST['abn_number'];
+        $paying_equipment_loans = $_POST['paying_equipment_loans'];
+        $paying_car_loans = $_POST['paying_car_loans'];
+        $paying_home_loans = $_POST['paying_home_loans'];
         $name = $_POST['name'];
-        $phone = $_POST['phone'];
         $email = $_POST['email'];
-        $message = $_POST['message'];
+        $finance_amount_required = $_POST['finance_amount_required'];
+        $description_of_equipment = $_POST['description_of_equipment'];
+        $verification_code = $_POST['verification_code'];
 
         $message = '<!DOCTYPE html>
                 <html>
@@ -49,16 +54,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['token'])) {
             '<td><b>' . strip_tags($name) . '</b></td>' .
             '</tr>' .
             '<tr>' .
-            '<td>Phone</td>' .
-            '<td><b>' . strip_tags($phone) . '</b></td>' .
-            '</tr>' .
-            '<tr>' .
             '<td>Email Address</td>' .
             '<td><b>' . strip_tags($email) . '</b></td>' .
             '</tr>' .
             '<tr>' .
-            '<td>Message</td>' .
-            '<td><b>' . strip_tags($message) . '</b></td>' .
+            '<td>ABN Number</td>' .
+            '<td><b>' . strip_tags($abn_number) . '</b></td>' .
+            '</tr>' .
+            '<tr>' .
+            '<td>Paying Equipment Loans</td>' .
+            '<td><b>' . strip_tags($paying_equipment_loans) . '</b></td>' .
+            '</tr>' .
+            '<tr>' .
+            '<td>Paying Car Loans</td>' .
+            '<td><b>' . strip_tags($paying_car_loans) . '</b></td>' .
+            '</tr>' .
+            '<tr>' .
+            '<td>Finance Amount Required</td>' .
+            '<td><b>' . strip_tags($finance_amount_required) . '</b></td>' .
+            '</tr>' .
+            '<tr>' .
+            '<td>Description of Equipment</td>' .
+            '<td><b>' . strip_tags($description_of_equipment) . '</b></td>' .
+            '</tr>' .
+            '<tr>' .
+            '<td>2 Digit Verification Code</td>' .
+            '<td><b>' . strip_tags($verification_code) . '</b></td>' .
             '</tr>' .
             '</tbody></table></body></html>';
 

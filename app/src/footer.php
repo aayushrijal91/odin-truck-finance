@@ -1,7 +1,7 @@
 <footer>
 	<div class="container">
 		<div class="row justify-content-center justify-content-lg-between align-items-center gy-5">
-			<div class="col-auto col-lg-1">
+			<div class="col-auto col-lg-2 col-xl-1">
 				<a href="./">
 					<?= renderImg("logo.png", "logo") ?>
 				</a>

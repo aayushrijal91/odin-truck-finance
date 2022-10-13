@@ -16,7 +16,7 @@ include __DIR__ . '/header.php';
                                 <?= renderImg("logo.png", "logo") ?>
                             </a>
                         </div>
-                        <div class="col d-none d-lg-block">
+                        <div class="col d-none d-xl-block">
                             <ul class="navigation">
                                 <li><a href="#about-us">About Us</a></li>
                                 <li><a href="#truck-finance">Truck Finance</a></li>
@@ -127,7 +127,7 @@ include __DIR__ . '/header.php';
 
     <div class="container position-relative">
         <div class="row align-items-center gy-5">
-            <div class="col-lg-7">
+            <div class="col-xl-7">
                 <form id="slider-form" class="bg-secondary" action="./src/form" method="POST">
                     <div class="multi-step-form">
                         <div class="multi-step-form-slider" id="multi-step-form-slider">
@@ -243,7 +243,7 @@ include __DIR__ . '/header.php';
                                     <div class="row">
                                         <div class="col-md-auto">
                                             <label>Please enter any two digits*</label>
-                                            <input type="number" placeholder="e.g. 23" class="form-control required" name="verification">
+                                            <input type="number" placeholder="e.g. 23" class="form-control required" name="verification_code">
                                         </div>
                                     </div>
                                 </div>
@@ -274,13 +274,13 @@ include __DIR__ . '/header.php';
 <section class="about-us" id="about-us">
     <div class="container position-relative">
         <div class="row align-items-center gy-5">
-            <div class="col-lg-6">
+            <div class="col-lg-5 col-xl-6">
                 <div class="fs-96 fw-700 lh-1 pb-4 pb-md-5 pb-lg-6">Who we are.</div>
                 <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-md-5 fw-500">
                     Enquire Now
                 </a>
             </div>
-            <div class="col-lg-6 fs-18">
+            <div class="col-lg fs-18">
                 <p>At Odin, we value the relationships we form with our clients and pride ourselves on ensuring each client’s experience is efficient and effective. We know how to strategically get the best result out of every bank and lender across Australia to grow your transport business the right way.</p>
                 <p>Odin’s goal is to optimise every client’s financial position, and through utilising our panel of over 50 market-leading lenders, we can guarantee a finance option with exceptional turnaround times and great value.</p>
                 <p>Our passion for finance, exceptional service and industry knowledge are all factors that have led to substantial growth in the assets we fund. Odin has the capacity to effectively deliver finance options for; motor vehicles, fit outs, agricultural equipment, earthmoving equipment, medical equipment, solar and working capital for businesses. Leave the finance to us–focus on running your business with a huge load off your shoulders.</p>
@@ -292,7 +292,7 @@ include __DIR__ . '/header.php';
 <section class="truck-finance" id="truck-finance">
     <div class="container position-relative">
         <div class="row gy-5">
-            <div class="col-lg-4">
+            <div class="col-xl-4">
                 <div class="fs-96 fw-700 lh-1">
                     We<br> finance<br> all types<br> of trucks<br>...
                 </div>
@@ -321,7 +321,7 @@ include __DIR__ . '/header.php';
 
     <div class="container position-relative">
         <div class="row justify-content-end pb-3">
-            <div class="col-lg-10 col-xxl-9">
+            <div class="col-xl-10 col-xxl-9">
                 <div class="fs-96 lh-1 fw-700 text-end">& can help you with multiple types of loans!</div>
             </div>
         </div>
@@ -330,7 +330,7 @@ include __DIR__ . '/header.php';
             $loan_types_1 = ["Boom / Scissor Lifts", "Construction / Mining Equipment", "Luxury Vehicles", "Agriculture", "Healthcare"];
 
             foreach ($loan_types_1 as $key => $type) { ?>
-                <div class="col-md-6 col-lg-3 col-xxl-2">
+                <div class="col-md-6 col-lg-4 col-xl-3 col-xxl-2">
                     <div class="truck-card">
                         <?= renderImg("loan_type_1_" . ($key + 1) . ".jpg", "lib", "w-100") ?>
                         <div class="caption"><?= $type ?></div>
@@ -344,7 +344,7 @@ include __DIR__ . '/header.php';
             $loan_types_1 = ["Transport / Logistics", "Manufacturing", "Business Finance", "Commercial Vehicles"];
 
             foreach ($loan_types_1 as $key => $type) { ?>
-                <div class="col-md-6 col-lg-3 col-xxl-2">
+                <div class="col-md-6 col-lg-4 col-xl-3 col-xxl-2">
                     <div class="truck-card">
                         <?= renderImg("loan_type_2_" . ($key + 1) . ".jpg", "lib", "w-100") ?>
                         <div class="caption"><?= $type ?></div>
@@ -360,7 +360,7 @@ include __DIR__ . '/header.php';
     <?= renderImg("why-us.png", "lib", "truck") ?>
     <div class="container">
         <div class="row justify-content-end">
-            <div class="col-lg-5 col-xxl-6">
+            <div class="col-xl-5 col-xxl-6">
                 <div class="fs-96 fw-700 pb-5 lh-1">So why ODIN?</div>
                 <div class="fs-18 pb-4">If you're looking for fast and expert truck loan financing, you've come to the right place. At Odin Finance, we understand the unique needs of truck owners, and our team is committed to getting you the best financing possible.</div>
                 <div class="fs-18">In the business for 20+ years, we’re specialists in Truck Financing, and we offer tailored products to match your customer profile. Whether you are looking for funding for personal or business, Odin Truck Finance can get the best loan for you!</div>
@@ -505,7 +505,7 @@ include __DIR__ . '/header.php';
 
     <div class="container position-relative">
         <div class="row justify-content-end">
-            <div class="col-lg-7 col-xxl-8 pt-7 pt-lg-0">
+            <div class="col-xl-7 col-xxl-8 pt-7 pt-xl-0">
                 <div class="fs-96 fw-700 lh-1">How long does it take?</div>
                 <div class="fs-18 pt-5 pt-md-6">For fast and simple application, contact one of our Consultants on <a href="tel:<?= $phone_number ?>" class="text-decoration-none text-white"><?= $phone_number ?></a> or enter your details into our online pre-approval page. Alternatively, you can send us a quick quote request and someone from our office will be in contact.</div>
                 <div class="px-md-4 py-5">
@@ -865,7 +865,7 @@ include __DIR__ . '/header.php';
 <section class="footer-contact">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-10 col-xxl-9 text-center lh-1">
+            <div class="col-xl-10 col-xxl-9 text-center lh-1">
                 <div class="fs-128 fw-700">Need a great deal on Truck Finance?</div>
                 <div class="fs-24 pt-5 pb-6">Go with a company that has been financing trucks for over 20 years</div>
                 <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-md-5 fw-500">

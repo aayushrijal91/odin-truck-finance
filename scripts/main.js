@@ -15,7 +15,7 @@ $(() => {
         touchMove: false,
         responsive: [
             {
-                breakpoint: 900,
+                breakpoint: 1100,
                 settings: {
                     centerPadding: "20px",
                     slidesToShow: 2,

@@ -46,7 +46,7 @@ section.banner {
         padding-bottom: 380px;
     }
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
         padding-bottom: 80px;
     }
 
@@ -61,19 +61,19 @@ section.banner {
         mix-blend-mode: screen;
         z-index: -1;
 
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(xl) {
             top: 20rem;
         }
     }
 
     .banner-truck {
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
             position: absolute;
             right: 10rem;
             bottom: 0;
         }
 
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(xl) {
             padding-top: 100px;
         }
 
@@ -386,10 +386,14 @@ section.why-us {
         @include media-breakpoint-up(md) {
             top: -18rem;
         }
+
+        @include media-breakpoint-only(lg) {
+            top: -28rem;
+        }
     }
 
     .truck {
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
             position: absolute;
             left: 0;
         }
@@ -521,7 +525,7 @@ section.timeframe {
     padding: 127px 0;
 
     .hero_van {
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
             position: absolute;
         }
     }
@@ -531,6 +535,10 @@ section.timeframe {
         mix-blend-mode: screen;
         top: -19rem;
         z-index: -1;
+
+        @include media-breakpoint-only(lg) {
+            top: -25rem;
+        }
 
         @include media-breakpoint-down(sm) {
             top: -10rem;
@@ -702,7 +710,7 @@ section.testimonials {
                 padding: 56px 0;
             }
 
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(xl) {
                 margin: 0 5px;
             }
         }
