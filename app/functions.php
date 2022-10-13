@@ -3,9 +3,9 @@ include __DIR__ . '/env.php';
 
 $site = "Odin Truck Finance";
 $phone_number = "1300 351 598";
-$admin_email = 'arijal@aiims.com.au'; // 'louie@odinfinance.com.au';
+$admin_email = 'louie@odinfinance.com.au';
 // $bcc_email = "";
-$no_reply_email = 'info@website.com.au';
+$no_reply_email = 'info@odinfinance.com.au';
 $recaptcha_client_secret = $client_secret;
 $recaptcha_server_secret = $server_secret;
 $facebook = "";

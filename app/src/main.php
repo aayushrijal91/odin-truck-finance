@@ -1,53 +1,7 @@
-<?php
-include __DIR__ . '/../functions.php';
-include __DIR__ . '/header.php';
-?>
-
 <header>
     <?= renderImg("ellipse-right.png", "background", "ellipse-right") ?>
 
     <div class="header-navigation-bar">
-        <div class="slide-navigation">
-            <div class="container h-100">
-                <div class="main-container">
-                    <div class="row align-items-center justify-content-between">
-                        <div class="col-5">
-                            <a href="./">
-                                <?= renderImg("logo.png", "logo") ?>
-                            </a>
-                        </div>
-                        <div class="col-auto">
-                            <a href="javascript:void(0)" id="hide-slide-nav">
-                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 18.8086C16.1064 15.915 6.46099 6.26959 2 1.80859" stroke="white" stroke-width="3" stroke-linecap="round" />
-                                    <path d="M19 1.80859C16.1064 4.70221 6.46099 14.3476 2 18.8086" stroke="white" stroke-width="3" stroke-linecap="round" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <ul class="nav-list">
-                        <li><a href="#about-us">About Us</a></li>
-                        <li><a href="#truck-finance">Truck Finance</a></li>
-                        <li><a href="#loans">Loans</a></li>
-                        <li><a href="#why-us">Why ODIN?</a></li>
-                        <li><a href="#how-does-it-work">How Does It Work?</a></li>
-                        <li><a href="#things-to-know">Things to know</a></li>
-                    </ul>
-                    <div class="row gy-4">
-                        <div class="col-12 text-center">
-                            <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-5">
-                                <?= $phone_number ?>
-                            </a>
-                        </div>
-                        <div class="col-12 text-center">
-                            <a href="#form" id="slide-nav-enquire" class="btn d-inline-flex rounded-pill border-white rounded-0 text-white px-5">
-                                Enquire Now
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="container">
             <div class="row justify-content-between align-items-center py-5">
                 <div class="col-auto">
@@ -276,6 +230,7 @@ include __DIR__ . '/header.php';
         <div class="row align-items-center gy-md-5">
             <div class="col-xl-7 px-0 px-md-3">
                 <form id="slider-form" class="bg-secondary rounded-20 rounded-md-0" action="./src/form" method="POST">
+                    <input type="hidden" name="token" id="recaptchaResponse" class="recaptchaResponse">
                     <div class="multi-step-form">
                         <div class="multi-step-form-slider" id="multi-step-form-slider">
                             <div class="tab">
@@ -296,19 +251,19 @@ include __DIR__ . '/header.php';
                                         <label>Do you own or are you paying off any equipment loans? *</label>
                                         <div class="form-group ps-2 ps-md-4">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="paying_equipment_loans" id="paying_equipment_loans1">
+                                                <input class="form-check-input" type="radio" name="paying_equipment_loans" id="paying_equipment_loans1" value="Own">
                                                 <label class="form-check-label" for="paying_equipment_loans1">
                                                     <span class="radio-button-circle"></span>Own
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="paying_equipment_loans" id="paying_equipment_loans2" checked>
+                                                <input class="form-check-input" type="radio" name="paying_equipment_loans" id="paying_equipment_loans2" value="Paying Off">
                                                 <label class="form-check-label" for="paying_equipment_loans2">
                                                     <span class="radio-button-circle"></span>Paying Off
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="paying_equipment_loans" id="paying_equipment_loans3" checked>
+                                                <input class="form-check-input" type="radio" name="paying_equipment_loans" id="paying_equipment_loans3" value="None" checked>
                                                 <label class="form-check-label" for="paying_equipment_loans3">
                                                     <span class="radio-button-circle"></span>None
                                                 </label>
@@ -319,19 +274,19 @@ include __DIR__ . '/header.php';
                                         <label>Do you own a car or are you paying off any car loans? *</label>
                                         <div class="form-group ps-2 ps-md-4">
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="paying_car_loans" id="paying_car_loans1">
+                                                <input class="form-check-input" type="radio" name="paying_car_loans" id="paying_car_loans1" value="Own">
                                                 <label class="form-check-label" for="paying_car_loans1">
                                                     <span class="radio-button-circle"></span><span class="radio-button-circle"></span>Own
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="paying_car_loans" id="paying_car_loans2" checked>
+                                                <input class="form-check-input" type="radio" name="paying_car_loans" id="paying_car_loans2" value="Paying Off">
                                                 <label class="form-check-label" for="paying_car_loans2">
                                                     <span class="radio-button-circle"></span><span class="radio-button-circle"></span>Paying Off
                                                 </label>
                                             </div>
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="paying_car_loans" id="paying_car_loans3" checked>
+                                                <input class="form-check-input" type="radio" name="paying_car_loans" id="paying_car_loans3" value="None">
                                                 <label class="form-check-label" for="paying_car_loans3">
                                                     <span class="radio-button-circle"></span><span class="radio-button-circle"></span>None
                                                 </label>
@@ -1050,5 +1005,3 @@ include __DIR__ . '/header.php';
         </div>
     </div>
 </section>
-
-<?php include __DIR__ . '/footer.php'; ?>

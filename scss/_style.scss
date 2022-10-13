@@ -2,52 +2,48 @@
 @return url("../images/" + $path + "/" + $file) no-repeat;
 }
 
-header {
-    position: relative;
+.slide-navigation {
+    background: #532888;
+    padding: 8px;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    transform: translateY(-100%);
+    transition: 0.2s all;
 
-    .header-navigation-bar {
-        position: relative;
+    .main-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
 
-        .slide-navigation {
-            background: #532888;
-            padding: 8px;
-            position: absolute;
-            width: 100%;
-            height: 100vh;
-            z-index: 10000;
-            transform: translateY(-100%);
-            transition: 0.2s all;
+        ul.nav-list {
+            padding-inline-start: 0;
+            margin-bottom: 0;
 
-            .main-container {
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-
-                ul.nav-list {
-                    padding-inline-start: 0;
-                    margin-bottom: 0;
-    
-                    li {
-                        list-style: none;
-                        padding: 16px 0;
-                        
-                        a {
-                            color: $white;
-                            text-decoration: none;
-                            font-size: 2.25rem;
-                            font-weight: 700;
-                            line-height: 1;
-                        }
-                    }
+            li {
+                list-style: none;
+                padding: 16px 0;
+                
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    font-size: 2.25rem;
+                    font-weight: 700;
+                    line-height: 1;
                 }
             }
-
-            &.show {
-                transform: translateY(0);
-            }
         }
+    }
 
+    &.show {
+        transform: translateY(0);
+    }
+}
+
+header {
+    .header-navigation-bar {
         ul.navigation {
             display: flex;
             align-items: center;
