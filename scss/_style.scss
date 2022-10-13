@@ -558,6 +558,11 @@ section.how-does-it-work {
                 padding: 30px 16px;
             }
 
+            @include media-breakpoint-down(sm) {
+                flex: 1 0 100%;
+                min-height: 250px;
+            }
+
             .content {
                 display: flex;
                 flex-direction: column;
@@ -573,7 +578,7 @@ section.how-does-it-work {
                     }
 
                     .fs-18 {
-                        font-size: 0.875rem !important;
+                        font-size: 1rem !important;
                     }
                 }
             }
@@ -583,22 +588,32 @@ section.how-does-it-work {
                 opacity: 0;
                 transition: 0.5s all;
                 position: absolute;
-                top: 140.5px;
                 z-index: 1000;
-
+                
                 &.prevBtn {
-                    left: -15px;
+                    @include media-breakpoint-up(md) {
+                        top: 140.5px;
+                        left: -15px;
+                    }
 
                     @include media-breakpoint-down(sm) {
-                        left: -8px;
+                        left: 45%;
+                        top: -15px;
+                        transform: rotate(90deg);
                     }
                 }
 
                 &.nextBtn {
-                    right: -15px;
+                    @include media-breakpoint-up(md) {
+                        top: 140.5px;
+                        right: -15px;
+                    }
 
                     @include media-breakpoint-down(sm) {
-                        right: -8px;
+                        
+                        left: 45%;
+                        bottom: -15px;
+                        transform: rotate(90deg);
                     }
                 }
             }
