@@ -40,18 +40,18 @@ header {
 
 section.banner {
     position: relative;
-    padding: 40px 0 260px;
+    padding-bottom: 40px;
 
-    @include media-breakpoint-down(xxl) {
-        padding-bottom: 380px;
+    @include media-breakpoint-up(md) {
+        padding: 40px 0 80px;
     }
 
-    @include media-breakpoint-down(xl) {
-        padding-bottom: 80px;
+    @include media-breakpoint-up(xl) {
+        padding: 40px 0 380px;
     }
 
-    @include media-breakpoint-down(sm) {
-        padding-bottom: 40px;
+    @include media-breakpoint-up(xxl) {
+        padding: 40px 0 260px;
     }
 
     .banner-lightening {
@@ -78,7 +78,7 @@ section.banner {
         }
 
         @include media-breakpoint-down(sm) {
-            padding-top: 50px;
+            padding-top: 85px;
         }
     }
 
@@ -87,11 +87,61 @@ section.banner {
             font-size: 7rem !important;
         }
     }
+
+    .sub_heading {
+        @include media-breakpoint-down(sm) {
+            font-size: 1.125rem !important;
+        }
+    }
 }
 
 section.cta {
     padding: 41px 0;
     position: relative;
+
+    .cta-slider-sm {
+        .slick-slide {
+            .cta-card {
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(237, 237, 237, 0.3) 100%);
+                mix-blend-mode: overlay;
+                box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.14);
+                padding: 24px;
+                margin: 16px 6px;
+            }
+        }
+
+        .slick-dots {
+            list-style-type: none;
+
+            li {
+                margin: 0 5px;
+                width: 10px;
+                height: 10px;
+            }
+
+            button {
+                display: block;
+                width: 10px;
+                height: 10px;
+                padding: 0;
+                border: none;
+                background-color: $white;
+                text-indent: -9999px;
+                border-radius: 50%;
+                opacity: 0.2;
+
+                &::before {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+
+            li.slick-active button {
+                background-color: $secondary;
+                opacity: 1;
+            }
+        }
+    }
 
     .cta-slider {
         .slick-slide {
@@ -151,6 +201,16 @@ section.form {
         }
 
         .tab {
+            @include media-breakpoint-down(sm) {
+                .hero_heading {
+                    font-size: 3rem !important;
+                }
+
+                .sub_heading {
+                    font-size: 1.125rem !important;
+                }
+            }
+
             label {
                 font-size: 1.125rem;
                 font-weight: 600;
@@ -298,6 +358,10 @@ section.form {
             padding-inline-start: 4rem;
         }
 
+        @include media-breakpoint-down(sm) {
+            padding-inline-start: 3rem;
+        }
+
         li {
             font-size: 1.5rem;
             font-weight: 500;
@@ -306,7 +370,7 @@ section.form {
             padding-left: 24px;
 
             @include media-breakpoint-down(sm) {
-                font-size: 1rem;
+                font-size: 1.125rem;
                 padding: 14px 0;
                 padding-left: 16px;
             }
@@ -350,6 +414,11 @@ section.truck-finance {
     text-align: center;
     padding: 14px 16px;
     font-weight: 600;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1rem;
+        height: 56px;
+    }
 }
 
 section.loans {
@@ -548,7 +617,7 @@ section.timeframe {
 
 section.things-to-know {
     position: relative;
-    
+
     @include media-breakpoint-up(lg) {
         padding: 123px 0;
     }

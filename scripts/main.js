@@ -20,14 +20,16 @@ $(() => {
                     centerPadding: "20px",
                     slidesToShow: 2,
                 }
-            },
-            {
-            breakpoint: 540,
-            settings: {
-                centerPadding: "20px",
-                slidesToShow: 1,
             }
-        }]
+        ]
+    });
+
+    $("#cta-sm").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrows: false,
+        dots: true,
     });
 
     let initialWidth = $('ul.loans-slider-nav li.active').outerWidth();
@@ -87,7 +89,7 @@ $(() => {
         e.preventDefault();
         $('.testimonials .accordion .tabs').removeClass('active');
         $(this).addClass('active');
-    });     
+    });
 });
 
 let formSlick = $("#multi-step-form-slider").slick({
@@ -98,6 +100,17 @@ let formSlick = $("#multi-step-form-slider").slick({
     draggable: false,
     dots: true,
     appendDots: $('.slick-slider-dots'),
+    responsive: [
+        {
+            breakpoint: 540,
+            settings: {
+                slidesToShow: 1,
+                draggable: false,
+                touchMove: false,
+                dots: false,
+            }
+        }
+    ]
 });
 
 let currentTab = 0;

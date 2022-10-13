@@ -110,6 +110,7 @@ $utilities: map-merge((
         responsive: true,
         values: (
             null: $border-radius,
+            0:0,
             1:1px,
             2:2px,
             3:3px,
@@ -120,6 +121,7 @@ $utilities: map-merge((
             8:8px,
             9:9px,
             10:10px,
+            20:20px,
             circle: 50%,
             pill: $border-radius-pill
         )
