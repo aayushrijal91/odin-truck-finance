@@ -13,7 +13,15 @@ $(() => {
         draggable: false,
         arrows: false,
         touchMove: false,
-        responsive: [{
+        responsive: [
+            {
+                breakpoint: 900,
+                settings: {
+                    centerPadding: "20px",
+                    slidesToShow: 2,
+                }
+            },
+            {
             breakpoint: 540,
             settings: {
                 centerPadding: "20px",

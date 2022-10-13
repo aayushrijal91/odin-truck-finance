@@ -16,7 +16,7 @@ include __DIR__ . '/header.php';
                                 <?= renderImg("logo.png", "logo") ?>
                             </a>
                         </div>
-                        <div class="col d-none d-md-block">
+                        <div class="col d-none d-lg-block">
                             <ul class="navigation">
                                 <li><a href="#about-us">About Us</a></li>
                                 <li><a href="#truck-finance">Truck Finance</a></li>
@@ -140,7 +140,7 @@ include __DIR__ . '/header.php';
                             </div>
                             <div class="tab">
                                 <div class="step fs-36 fw-700 pb-5 line-height-1">A few quick questions...</div>
-                                <div class="row gy-4 gy-md-5">
+                                <div class="row gy-4 gy-lg-5">
                                     <div class="col-12 col-xl-8">
                                         <label>ABN Number*</label>
                                         <input type="text" placeholder="Input 'new' if start up business" class="form-control required" name="abn_number">
@@ -218,7 +218,7 @@ include __DIR__ . '/header.php';
                             </div>
                             <div class="tab">
                                 <div class="step fs-36 fw-700 pb-5 line-height-1">Your details...</div>
-                                <div class="row gy-5">
+                                <div class="row gy-4 gy-lg-5">
                                     <div class="col-12">
                                         <label>Full Name*</label>
                                         <input type="text" placeholder="e.g. John Smith" class="form-control required" name="name">
@@ -275,7 +275,7 @@ include __DIR__ . '/header.php';
     <div class="container position-relative">
         <div class="row align-items-center gy-5">
             <div class="col-lg-6">
-                <div class="fs-96 fw-700 lh-1 pb-4 pb-md-6">Who we are.</div>
+                <div class="fs-96 fw-700 lh-1 pb-4 pb-md-5 pb-lg-6">Who we are.</div>
                 <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-md-5 fw-500">
                     Enquire Now
                 </a>
@@ -303,7 +303,7 @@ include __DIR__ . '/header.php';
                     $truck_types = ["Car Carrier", "Concrete Truck", "Crane Truck", "Livestock Truck", "Refrigerated Truck", "Tilt Tray Truck", "Tip Truck", "Water Truck", "Pantech Truck", "Prime Mover"];
 
                     foreach ($truck_types as $key => $type) { ?>
-                        <div class="col-lg-4 col-xxl-3">
+                        <div class="col-md-6 col-lg-4 col-xxl-3">
                             <div class="truck-card">
                                 <?= renderImg("truck-finance-" . ($key + 1) . ".jpg", "lib", "w-100") ?>
                                 <div class="caption"><?= $type ?></div>
@@ -325,12 +325,12 @@ include __DIR__ . '/header.php';
                 <div class="fs-96 lh-1 fw-700 text-end">& can help you with multiple types of loans!</div>
             </div>
         </div>
-        <div class="row pt-4 pt-md-9 g-4 gy-md-5">
+        <div class="row pt-4 pt-md-5 pt-lg-9 g-4 gy-md-5">
             <?php
             $loan_types_1 = ["Boom / Scissor Lifts", "Construction / Mining Equipment", "Luxury Vehicles", "Agriculture", "Healthcare"];
 
             foreach ($loan_types_1 as $key => $type) { ?>
-                <div class="col-lg-3 col-xxl-2">
+                <div class="col-md-6 col-lg-3 col-xxl-2">
                     <div class="truck-card">
                         <?= renderImg("loan_type_1_" . ($key + 1) . ".jpg", "lib", "w-100") ?>
                         <div class="caption"><?= $type ?></div>
@@ -344,7 +344,7 @@ include __DIR__ . '/header.php';
             $loan_types_1 = ["Transport / Logistics", "Manufacturing", "Business Finance", "Commercial Vehicles"];
 
             foreach ($loan_types_1 as $key => $type) { ?>
-                <div class="col-lg-3 col-xxl-2">
+                <div class="col-md-6 col-lg-3 col-xxl-2">
                     <div class="truck-card">
                         <?= renderImg("loan_type_2_" . ($key + 1) . ".jpg", "lib", "w-100") ?>
                         <div class="caption"><?= $type ?></div>
@@ -505,7 +505,7 @@ include __DIR__ . '/header.php';
 
     <div class="container position-relative">
         <div class="row justify-content-end">
-            <div class="col-lg-7 col-xxl-8 pt-7 pt-md-0">
+            <div class="col-lg-7 col-xxl-8 pt-7 pt-lg-0">
                 <div class="fs-96 fw-700 lh-1">How long does it take?</div>
                 <div class="fs-18 pt-5 pt-md-6">For fast and simple application, contact one of our Consultants on <a href="tel:<?= $phone_number ?>" class="text-decoration-none text-white"><?= $phone_number ?></a> or enter your details into our online pre-approval page. Alternatively, you can send us a quick quote request and someone from our office will be in contact.</div>
                 <div class="px-md-4 py-5">
@@ -543,7 +543,7 @@ include __DIR__ . '/header.php';
             </div>
             <div class="col-lg col-xxl-6">
                 <div class="row gx-4">
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="row gy-3 gy-md-4">
                             <div class="col-12">
                                 <div class="things-to-know-card active">
@@ -583,7 +583,7 @@ include __DIR__ . '/header.php';
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="row pt-4 gy-3 gy-md-4">
                             <div class="col-12">
                                 <div class="things-to-know-card">

@@ -21,8 +21,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-auto">
-				<div class="row align-items-center">
+			<div class="col-lg-auto">
+				<div class="row align-items-center justify-content-center">
 					<div class="col-auto">
 						<a href="" class="">
 							<svg width="13" height="26" viewBox="0 0 13 26" fill="none" xmlns="http://www.w3.org/2000/svg">
