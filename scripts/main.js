@@ -12,7 +12,14 @@ $(() => {
         autoplaySpeed: 0,
         draggable: false,
         arrows: false,
-        touchMove: false
+        touchMove: false,
+        responsive: [{
+            breakpoint: 540,
+            settings: {
+                centerPadding: "20px",
+                slidesToShow: 1,
+            }
+        }]
     });
 
     let initialWidth = $('ul.loans-slider-nav li.active').outerWidth();

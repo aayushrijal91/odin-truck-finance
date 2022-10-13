@@ -31,6 +31,10 @@ header {
         right: 0;
         top: -23rem;
         z-index: -1;
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
     }
 }
 
@@ -42,17 +46,32 @@ section.banner {
         padding-bottom: 380px;
     }
 
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 40px;
+    }
+
     .banner-lightening {
         position: absolute;
         top: -2.5rem;
         right: 0;
         mix-blend-mode: screen;
+        z-index: -1;
+
+        @include media-breakpoint-down(sm) {
+            top: 20rem;
+        }
     }
 
     .banner-truck {
-        position: absolute;
-        right: 10rem;
-        bottom: 0;
+        @include media-breakpoint-up(md) {
+            position: absolute;
+            right: 10rem;
+            bottom: 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 50px;
+        }
     }
 
     .hero_heading {
@@ -81,10 +100,18 @@ section.form {
     padding: 128px 0;
     position: relative;
 
+    @include media-breakpoint-down(sm) {
+        padding: 80px 0;
+    }
+
     .ellipse-left {
         position: absolute;
         left: 0;
         z-index: -1;
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
     }
 
     .multi-step-form {
@@ -92,6 +119,10 @@ section.form {
 
         @include media-breakpoint-down(xxl) {
             padding: 60px 40px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 40px 16px;
         }
 
         #prevBtn {
@@ -145,8 +176,17 @@ section.form {
                 }
             }
 
+            .form-check {
+                @include media-breakpoint-down(sm) {
+                    padding-left: 0;
+                    margin-bottom: 0;
+                }
+            }
+
             .form-check-inline {
-                margin-right: 2.5rem;
+                @include media-breakpoint-up(md) {
+                    margin-right: 2.5rem;
+                }
             }
 
 
@@ -157,7 +197,7 @@ section.form {
             .form-check-label {
                 cursor: pointer;
                 display: inline-block;
-                font-size: 16px;
+                font-size: 1rem;
                 line-height: 1.5;
                 padding: 14px 14px 14px 32px;
                 position: relative;
@@ -171,6 +211,10 @@ section.form {
 
                 &:active .radio-button-circle:before {
                     transform: scale(1.1);
+                }
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 0.875rem;
                 }
             }
 
@@ -252,6 +296,12 @@ section.form {
             line-height: 1.29;
             padding: 23px 0;
             padding-left: 24px;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 1rem;
+                padding: 14px 0;
+                padding-left: 16px;
+            }
         }
     }
 }
@@ -259,13 +309,21 @@ section.form {
 section.about-us {
     padding: 223px 0;
     position: relative;
+
+    @include media-breakpoint-down(sm) {
+        padding: 80px 0;
+    }
 }
 
 section.truck-finance {
     padding: 127px 0;
     position: relative;
 
-    .types-row {        
+    @include media-breakpoint-down(sm) {
+        padding: 80px 0;
+    }
+
+    .types-row {
         @include media-breakpoint-up(xxl) {
             padding-top: 250px;
         }
@@ -290,11 +348,19 @@ section.loans {
     padding: 223px 0;
     position: relative;
 
+    @include media-breakpoint-down(sm) {
+        padding: 80px 0;
+    }
+
     .ellipse-right {
         position: absolute;
         right: 0;
         top: -23rem;
         z-index: -1;
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
     }
 }
 
@@ -305,25 +371,39 @@ section.why-us {
     .lightening {
         position: absolute;
         left: 0;
-        top: -18rem;
         mix-blend-mode: screen;
+        z-index: -1;
+        top: -10rem;
+
+        @include media-breakpoint-up(md) {
+            top: -18rem;
+        }
     }
 
     .truck {
-        position: absolute;
-        left: 0;
+        @include media-breakpoint-up(md) {
+            position: absolute;
+            left: 0;
+        }
     }
 }
 
 section.how-does-it-work {
-    padding: 223px 0;
     position: relative;
+
+    @include media-breakpoint-up(md) {
+        padding: 223px 0;
+    }
 
     .ellipse-left {
         position: absolute;
         top: -30rem;
         left: 0;
         z-index: -1;
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
     }
 
     ul.loans-slider-nav {
@@ -336,10 +416,15 @@ section.how-does-it-work {
         li {
             list-style: none;
             min-height: 311px;
-            padding: 30px;
             position: relative;
             flex: 1 0 0%;
             opacity: 0.5;
+            padding: 30px;
+
+            @include media-breakpoint-down(sm) {
+                min-height: 310px;
+                padding: 30px 16px;
+            }
 
             .content {
                 display: flex;
@@ -349,6 +434,12 @@ section.how-does-it-work {
                 position: relative;
                 z-index: 5;
                 height: 100%;
+
+                @include media-breakpoint-down(sm) {
+                    .fs-18 {
+                        font-size: 0.875rem !important;
+                    }
+                }
             }
 
             a {
@@ -361,10 +452,18 @@ section.how-does-it-work {
 
                 &.prevBtn {
                     left: -15px;
+
+                    @include media-breakpoint-down(sm) {
+                        left: -8px;
+                    }
                 }
 
                 &.nextBtn {
                     right: -15px;
+
+                    @include media-breakpoint-down(sm) {
+                        right: -8px;
+                    }
                 }
             }
 
@@ -374,6 +473,10 @@ section.how-does-it-work {
                 a {
                     display: block;
                     opacity: 1;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    background: $secondary;
                 }
             }
 
@@ -385,6 +488,10 @@ section.how-does-it-work {
                 z-index: 1;
                 transition: 0.5s;
                 opacity: 0;
+
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
             }
 
             &.active~.slide {
@@ -399,25 +506,39 @@ section.timeframe {
     padding: 127px 0;
 
     .hero_van {
-        position: absolute;
+        @include media-breakpoint-up(md) {
+            position: absolute;
+        }
     }
 
     .lightening {
         position: absolute;
         mix-blend-mode: screen;
         top: -19rem;
+        z-index: -1;
+
+        @include media-breakpoint-down(sm) {
+            top: -10rem;
+        }
     }
 }
 
 section.things-to-know {
-    padding: 123px 0;
     position: relative;
+    
+    @include media-breakpoint-up(md) {
+        padding: 123px 0;
+    }
 
     .ellipse-right {
         position: absolute;
         right: 0;
         top: -30rem;
         z-index: -1;
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
     }
 
     .things-to-know-card {
@@ -434,10 +555,18 @@ section.faq {
     padding: 227px 0;
     position: relative;
 
+    @include media-breakpoint-down(sm) {
+        padding: 123px 0;
+    }
+
     .ellipse-left {
         position: absolute;
         left: 0;
         z-index: -1;
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
     }
 
     @include media-breakpoint-up(md) {
@@ -466,7 +595,7 @@ section.faq {
         cursor: pointer;
         font-weight: 600;
         text-transform: capitalize;
-        padding: 1rem;
+        padding: 1rem 0;
         transition: 0.2s all;
 
         @include media-breakpoint-up(xl) {
@@ -518,6 +647,10 @@ section.testimonials {
     padding: 123px 0;
     position: relative;
 
+    @include media-breakpoint-down(sm) {
+        padding: 80px 0;
+    }
+
     .testimonial-slider {
         .slick-track {
             display: flex;
@@ -541,18 +674,15 @@ section.testimonials {
                 .name {
                     font-size: 1.25rem;
                     font-weight: 600;
-                    color: $dark;
                 }
 
                 .location {
-                    color: $primary;
                     font-size: 1rem;
                     line-height: 1;
                 }
             }
 
             .testimonial-description {
-                color: $dark;
                 font-size: 1rem;
                 padding: 56px 0;
             }
@@ -589,7 +719,7 @@ section.testimonials {
             }
 
             li.slick-active button {
-                background-color: $primary;
+                background-color: $secondary;
             }
         }
     }
@@ -699,6 +829,10 @@ section.testimonials {
 section.footer-contact {
     padding: 227px 0;
     position: relative;
+
+    @include media-breakpoint-down(sm) {
+        padding: 123px 0;
+    }
 }
 
 footer {

@@ -8,7 +8,7 @@ include __DIR__ . '/header.php';
 
     <div class="header-navigation-bar">
         <div class="container">
-            <div class="row justify-content-center justify-content-lg-between align-items-center py-5">
+            <div class="row justify-content-between align-items-center py-5">
                 <div class="col-auto">
                     <div class="row align-items-center gx-8">
                         <div class="col-auto">
@@ -16,7 +16,7 @@ include __DIR__ . '/header.php';
                                 <?= renderImg("logo.png", "logo") ?>
                             </a>
                         </div>
-                        <div class="col">
+                        <div class="col d-none d-md-block">
                             <ul class="navigation">
                                 <li><a href="#about-us">About Us</a></li>
                                 <li><a href="#truck-finance">Truck Finance</a></li>
@@ -40,8 +40,7 @@ include __DIR__ . '/header.php';
 
 <section class="banner">
     <?= renderImg("banner-lightening.png", "background", "banner-lightening") ?>
-    <?= renderImg("banner-truck.png", "background", "banner-truck") ?>
-
+    
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
@@ -53,6 +52,7 @@ include __DIR__ . '/header.php';
             </div>
         </div>
     </div>
+    <?= renderImg("banner-truck.png", "background", "banner-truck") ?>
 </section>
 
 <section class="cta">
@@ -126,7 +126,7 @@ include __DIR__ . '/header.php';
     <?= renderImg("ellipse-left.png", "background", "ellipse-left") ?>
 
     <div class="container position-relative">
-        <div class="row align-items-center">
+        <div class="row align-items-center gy-5">
             <div class="col-lg-7">
                 <form id="slider-form" class="bg-secondary" action="./src/form" method="POST">
                     <div class="multi-step-form">
@@ -140,14 +140,14 @@ include __DIR__ . '/header.php';
                             </div>
                             <div class="tab">
                                 <div class="step fs-36 fw-700 pb-5 line-height-1">A few quick questions...</div>
-                                <div class="row gy-5">
+                                <div class="row gy-4 gy-md-5">
                                     <div class="col-12 col-xl-8">
                                         <label>ABN Number*</label>
                                         <input type="text" placeholder="Input 'new' if start up business" class="form-control required" name="abn_number">
                                     </div>
                                     <div class="col-12">
                                         <label>Do you own or are you paying off any equipment loans? *</label>
-                                        <div class="form-group ps-4">
+                                        <div class="form-group ps-2 ps-md-4">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="paying_equipment_loans" id="paying_equipment_loans1">
                                                 <label class="form-check-label" for="paying_equipment_loans1">
@@ -170,7 +170,7 @@ include __DIR__ . '/header.php';
                                     </div>
                                     <div class="col-12">
                                         <label>Do you own a car or are you paying off any car loans? *</label>
-                                        <div class="form-group ps-4">
+                                        <div class="form-group ps-2 ps-md-4">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="paying_car_loans" id="paying_car_loans1">
                                                 <label class="form-check-label" for="paying_car_loans1">
@@ -193,7 +193,7 @@ include __DIR__ . '/header.php';
                                     </div>
                                     <div class="col-12">
                                         <label>Do you own a home or are you paying off a home loan? *</label>
-                                        <div class="form-group ps-4">
+                                        <div class="form-group ps-2 ps-md-4">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="paying_home_loans" id="paying_home_loans1">
                                                 <label class="form-check-label" for="paying_home_loans1">
@@ -249,7 +249,7 @@ include __DIR__ . '/header.php';
                                 </div>
                             </div>
                         </div>
-                        <div class="buttons d-flex align-items-center justify-content-md-start justify-content-center flex-wrap mt-5">
+                        <div class="buttons d-flex align-items-center flex-wrap mt-5">
                             <button type="button" id="nextBtn" class="btn d-inline-flex rounded-pill btn-white rounded-0 text-primary px-md-5" onclick="nextPrev(1)">Next</button>
                             <span class="px-3 py-md-0 py-2 text-tertiary" id="prevBtn" onclick="nextPrev(-1)">Go Back</span>
                         </div>
@@ -273,9 +273,9 @@ include __DIR__ . '/header.php';
 
 <section class="about-us" id="about-us">
     <div class="container position-relative">
-        <div class="row align-items-center">
+        <div class="row align-items-center gy-5">
             <div class="col-lg-6">
-                <div class="fs-96 fw-700 lh-1 pb-6">Who we are.</div>
+                <div class="fs-96 fw-700 lh-1 pb-4 pb-md-6">Who we are.</div>
                 <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-md-5 fw-500">
                     Enquire Now
                 </a>
@@ -291,14 +291,14 @@ include __DIR__ . '/header.php';
 
 <section class="truck-finance" id="truck-finance">
     <div class="container position-relative">
-        <div class="row">
+        <div class="row gy-5">
             <div class="col-lg-4">
                 <div class="fs-96 fw-700 lh-1">
                     We<br> finance<br> all types<br> of trucks<br>...
                 </div>
             </div>
             <div class="col">
-                <div class="row gx-4 gy-5 types-row">
+                <div class="row g-4 gy-md-5 types-row">
                     <?php
                     $truck_types = ["Car Carrier", "Concrete Truck", "Crane Truck", "Livestock Truck", "Refrigerated Truck", "Tilt Tray Truck", "Tip Truck", "Water Truck", "Pantech Truck", "Prime Mover"];
 
@@ -325,7 +325,7 @@ include __DIR__ . '/header.php';
                 <div class="fs-96 lh-1 fw-700 text-end">& can help you with multiple types of loans!</div>
             </div>
         </div>
-        <div class="row pt-9 gy-5">
+        <div class="row pt-4 pt-md-9 g-4 gy-md-5">
             <?php
             $loan_types_1 = ["Boom / Scissor Lifts", "Construction / Mining Equipment", "Luxury Vehicles", "Agriculture", "Healthcare"];
 
@@ -339,7 +339,7 @@ include __DIR__ . '/header.php';
             <?php } ?>
         </div>
 
-        <div class="row justify-content-end pt-5">
+        <div class="row justify-content-end pt-4 pt-md-5 g-4">
             <?php
             $loan_types_1 = ["Transport / Logistics", "Manufacturing", "Business Finance", "Commercial Vehicles"];
 
@@ -364,7 +364,7 @@ include __DIR__ . '/header.php';
                 <div class="fs-96 fw-700 pb-5 lh-1">So why ODIN?</div>
                 <div class="fs-18 pb-4">If you're looking for fast and expert truck loan financing, you've come to the right place. At Odin Finance, we understand the unique needs of truck owners, and our team is committed to getting you the best financing possible.</div>
                 <div class="fs-18">In the business for 20+ years, we’re specialists in Truck Financing, and we offer tailored products to match your customer profile. Whether you are looking for funding for personal or business, Odin Truck Finance can get the best loan for you!</div>
-                <div class="px-4 py-5">
+                <div class="px-md-4 py-5">
                     <div class="row align-items-center py-3">
                         <div class="col-auto"><?= renderImg("why-us-1.png", "icons") ?></div>
                         <div class="col fs-24 fw-600">We specialise in truck finance and can present our clients with funding solutions every time</div>
@@ -502,13 +502,13 @@ include __DIR__ . '/header.php';
 <section class="timeframe">
     <?= renderImg("lightening-timeframe.png", "background", "lightening") ?>
     <?= renderImg("how-long-van.png", "lib", "hero_van") ?>
-    
+
     <div class="container position-relative">
         <div class="row justify-content-end">
-            <div class="col-lg-7 col-xxl-8">
+            <div class="col-lg-7 col-xxl-8 pt-7 pt-md-0">
                 <div class="fs-96 fw-700 lh-1">How long does it take?</div>
-                <div class="fs-18 pt-6">For fast and simple application, contact one of our Consultants on <a href="tel:<?= $phone_number ?>" class="text-decoration-none text-white"><?= $phone_number ?></a> or enter your details into our online pre-approval page. Alternatively, you can send us a quick quote request and someone from our office will be in contact.</div>
-                <div class="px-4 py-5">
+                <div class="fs-18 pt-5 pt-md-6">For fast and simple application, contact one of our Consultants on <a href="tel:<?= $phone_number ?>" class="text-decoration-none text-white"><?= $phone_number ?></a> or enter your details into our online pre-approval page. Alternatively, you can send us a quick quote request and someone from our office will be in contact.</div>
+                <div class="px-md-4 py-5">
                     <div class="row align-items-center py-3">
                         <div class="col-auto"><?= renderImg("why-us-3.png", "icons") ?></div>
                         <div class="col fs-24 fw-600">Obtain conditional online finance in <span class="fs-32">Seconds</span></div>
@@ -535,7 +535,7 @@ include __DIR__ . '/header.php';
 
     <div class="container position-relative">
         <div class="row justify-content-between">
-            <div class="col-lg-5 py-8">
+            <div class="col-lg-5 py-5 py-md-8">
                 <div class="fs-96 lh-1 fw-700">Things you should know<br>...</div>
                 <div class="fs-18 pt-6">
                     Finding a truck is never easy, but we can make the finance part simpler for you! To help you get prepared, here are some points to take into consideration before you make your next truck purchase.
@@ -544,7 +544,7 @@ include __DIR__ . '/header.php';
             <div class="col-lg col-xxl-6">
                 <div class="row gx-4">
                     <div class="col-lg-6">
-                        <div class="row gy-4">
+                        <div class="row gy-3 gy-md-4">
                             <div class="col-12">
                                 <div class="things-to-know-card active">
                                     <div class="pb-4">
@@ -584,7 +584,7 @@ include __DIR__ . '/header.php';
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="row pt-4 gy-4">
+                        <div class="row pt-4 gy-3 gy-md-4">
                             <div class="col-12">
                                 <div class="things-to-know-card">
                                     <div class="pb-4">
@@ -686,7 +686,7 @@ include __DIR__ . '/header.php';
 
     ?>
     <div class="container position-relative">
-        <div class="fs-64 lh-1 text-center fw-700 pb-6">Frequently asked questions</div>
+        <div class="fs-64 lh-1 text-center fw-700 pb-5 pb-md-6">Frequently asked questions</div>
         <div class="accordion-container">
             <?php foreach ($faqs as $key => $faq) : ?>
                 <div class="accordion-card" <?= $key == 0 ? 'style="background: #F9A51A;"' : '' ?>>
