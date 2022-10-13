@@ -6,7 +6,7 @@
 					<?= renderImg("logo.png", "logo") ?>
 				</a>
 			</div>
-			<div class="col-lg-auto d-md-none py-4">
+			<!-- <div class="col-lg-auto d-md-none py-4">
 				<div class="row align-items-center justify-content-center">
 					<div class="col-auto">
 						<a href="<?= $facebook ?>">
@@ -33,8 +33,8 @@
 						</a>
 					</div>
 				</div>
-			</div>
-			<div class="col-auto">
+			</div> -->
+			<div class="col-lg-auto">
 				<div class="row gx-2 gx-md-3 text-grey justify-content-center gy-md-4">
 					<div class="col-md-auto text-center pb-4 pb-md-0"><?= $site ?></div>
 					<div class="col-auto d-none d-md-block">/</div>
@@ -43,7 +43,7 @@
 					<div class="col-md-auto text-center">All Rights Reserved</div>
 				</div>
 			</div>
-			<div class="col-lg-auto d-none d-md-block">
+			<!-- <div class="col-lg-auto d-none d-md-block">
 				<div class="row align-items-center justify-content-center">
 					<div class="col-auto">
 						<a href="<?= $facebook ?>">
@@ -70,7 +70,7 @@
 						</a>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="col-auto">
 				<a href="https://www.aiims.com.au/like-our-work/" target="_blank">
 					<?= renderImg("aiims.png", "logo") ?>
