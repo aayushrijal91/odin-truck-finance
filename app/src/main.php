@@ -432,7 +432,7 @@ include __DIR__ . '/header.php';
             </div>
         </div>
 
-        <div class="row pt-4 pt-md-5 pt-lg-9 g-2 gx-md-4 gy-md-5 d-md-none">
+        <div class="row pt-4 pt-md-5 pt-lg-9 g-2 gx-md-4 gy-md-5 d-xxl-none">
             <?php
             $loan_types_sm = ["Boom / Scissor Lifts", "Construction / Mining Equipment", "Luxury Vehicles", "Agriculture", "Healthcare", "Transport / Logistics", "Manufacturing", "Business Finance", "Commercial Vehicles"];
             $index = 1;
@@ -451,7 +451,7 @@ include __DIR__ . '/header.php';
             <?php $index ++; } ?>
         </div>
 
-        <div class="row pt-4 pt-md-5 pt-lg-9 g-2 gx-md-4 gy-md-5 d-none d-md-flex">
+        <div class="row pt-4 pt-md-5 pt-lg-9 g-2 gx-md-4 gy-md-5 d-none d-xxl-flex">
             <?php
             $loan_types_1 = ["Boom / Scissor Lifts", "Construction / Mining Equipment", "Luxury Vehicles", "Agriculture", "Healthcare"];
 
@@ -465,7 +465,7 @@ include __DIR__ . '/header.php';
             <?php } ?>
         </div>
 
-        <div class="row justify-content-end pt-2 pt-md-5 g-2 gx-md-4 gy-md-5 d-none d-md-flex">
+        <div class="row justify-content-end pt-2 pt-md-5 g-2 gx-md-4 gy-md-5 d-none d-xxl-flex">
             <?php
             $loan_types_2 = ["Transport / Logistics", "Manufacturing", "Business Finance", "Commercial Vehicles"];
 
@@ -512,7 +512,7 @@ include __DIR__ . '/header.php';
                         <div class="col fs-24 fw-600">We deal with transport operators Australia-wide</div>
                     </div>
                 </div>
-                <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-md-5 fw-500">
+                <a href="tel:<?= $phone_number ?>" class="btn d-inline-flex rounded-pill btn-secondary rounded-0 text-white px-5 fw-500">
                     Enquire Now
                 </a>
             </div>
@@ -662,8 +662,8 @@ include __DIR__ . '/header.php';
     <div class="container position-relative">
         <div class="row justify-content-between">
             <div class="col-lg-5 py-5 py-md-8">
-                <div class="fs-96 lh-1 fw-700">Things you should know<br>...</div>
-                <div class="fs-18 pt-6">
+                <div class="hero_heading fs-96 lh-1 fw-700">Things<br class="d-md-none"> you<br class="d-md-none"> should know<br>...</div>
+                <div class="fs-18 pt-5 pt-md-6">
                     Finding a truck is never easy, but we can make the finance part simpler for you! To help you get prepared, here are some points to take into consideration before you make your next truck purchase.
                 </div>
             </div>
@@ -812,7 +812,7 @@ include __DIR__ . '/header.php';
 
     ?>
     <div class="container position-relative">
-        <div class="fs-64 lh-1 text-center fw-700 pb-5 pb-md-6">Frequently asked questions</div>
+        <div class="fs-64 lh-1 text-md-center fw-700 pb-5 pb-md-6">Frequently asked questions</div>
         <div class="accordion-container">
             <?php foreach ($faqs as $key => $faq) : ?>
                 <div class="accordion-card" <?= $key == 0 ? 'style="background: #F9A51A;"' : '' ?>>
