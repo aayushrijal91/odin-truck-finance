@@ -139,8 +139,6 @@ function showTab(n) {
 
     if (n == 0) {
         $("#prevBtn").css('display', 'none');
-        $("#nextBtn").removeClass('border-white').removeClass('text-white').addClass('btn-white').addClass('text-primary');
-        $("#nextBtn").html('Get Started');
     } else if (n == (x.length)) {
         $('.buttons').removeClass('d-flex').addClass('d-none');
     } else if (n == (x.length - 1)) {

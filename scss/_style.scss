@@ -233,11 +233,6 @@ section.form {
             height: inherit !important;
         }
 
-        .faded {
-            color: #FEFFB6;
-            opacity: 0.5;
-        }
-
         .tab {
             @include media-breakpoint-down(sm) {
                 .hero_heading {

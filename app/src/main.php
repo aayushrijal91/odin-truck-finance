@@ -227,19 +227,12 @@
     <?= renderImg("ellipse-left.png", "background", "ellipse-left") ?>
 
     <div class="container position-relative">
-        <div class="row align-items-center gy-md-5">
-            <div class="col-xl-7 px-0 px-md-3">
+        <div class="row align-items-center gy-md-5 gx-xl-7">
+            <div class="col-xl-6 px-0 px-md-3">
                 <form id="slider-form" class="bg-secondary rounded-20 rounded-md-0" action="./src/form" method="POST">
                     <input type="hidden" name="token" id="recaptchaResponse" class="recaptchaResponse">
                     <div class="multi-step-form">
                         <div class="multi-step-form-slider" id="multi-step-form-slider">
-                            <div class="tab">
-                                <div class="fs-24 fw-600 faded pt-7 pt-md-0">Enquire Here</div>
-                                <div class="hero_heading fs-64 lh-1 fw-700 pt-2">Go with the right<br class="d-none d-md-block"> Truck Finance</div>
-                                <div class="sub_heading fs-24 fw-600 pt-6">
-                                    For pre-approval on Truck or Heavy Equipment Finance up to $500K, please complete this simple form. It’s easy and will give you an answer within seconds!
-                                </div>
-                            </div>
                             <div class="tab">
                                 <div class="step fs-36 fw-700 pb-5 line-height-1">A few quick questions...</div>
                                 <div class="row gy-4 gy-lg-5">
@@ -352,7 +345,7 @@
                             </div>
                         </div>
                         <div class="buttons d-flex flex-column flex-md-row justify-content-center justify-content-md-start align-items-center flex-wrap mt-5">
-                            <button type="button" id="nextBtn" class="btn d-inline-flex rounded-pill btn-white rounded-0 text-primary px-5" onclick="nextPrev(1)">Next</button>
+                            <button type="button" id="nextBtn" class="btn d-inline-flex rounded-pill border-white rounded-0 text-white px-5" onclick="nextPrev(1)">Next</button>
                             <span class="px-3 py-md-0 py-2 text-tertiary" id="prevBtn" onclick="nextPrev(-1)">Go Back</span>
                         </div>
                     </div>
@@ -360,6 +353,10 @@
                 <div class="slick-slider-dots pt-3"></div>
             </div>
             <div class="col-12 col-lg">
+                <div class="hero_heading fs-64 lh-1 fw-700 pt-2">Go with the right<br class="d-none d-md-block"> Truck Finance</div>
+                <div class="sub_heading fs-24 fw-600 py-5">
+                    For pre-approval on Truck or Heavy Equipment Finance up to $500K, please complete this simple form. It’s easy and will give you an answer within seconds!
+                </div>
                 <ul class="form-list">
                     <li>Same Day Truck Finance</li>
                     <li>No Doc and Low doc funding for up to $500K</li>
