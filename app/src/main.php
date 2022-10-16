@@ -218,9 +218,6 @@
             <div class="fs-24 fw-700 lh-3 pt-5">Expert Knowledge<br> on Trucks</div>
         </div>
     </div>
-    <div class="container d-none d-md-block">
-        <div class="fs-18">*Conditions apply</div>
-    </div>
 </section>
 
 <section class="form" id="form">
